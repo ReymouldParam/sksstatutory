@@ -1,0 +1,269 @@
+/*=========================================
+Page Banner (shared - About / Services)
+=========================================*/
+
+.page-banner {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.banner-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.banner-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark gradient overlay - stronger at bottom for text legibility */
+
+.banner-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.85) 100%);
+}
+
+/*=========================================
+Content
+=========================================*/
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 0 40px 60px;
+}
+
+.banner-content h1 {
+    font-family: "Arimo", sans-serif;
+    font-size: 68px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 22px;
+    max-width: 1100px;
+}
+
+.banner-content p {
+    font-size: 24px;
+    font-weight: 400;
+    color: #f0f0f0;
+    line-height: 1.5;
+    max-width: 800px;
+}
+
+/*=========================================
+Services List Section
+=========================================*/
+
+.services-list-section {
+    padding: 20px 0 100px;
+    background: #fff;
+}
+
+.services-list-section .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/*=========================================
+Filter Tabs
+=========================================*/
+
+.service-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    /* background: #f5f5f5; */
+    border-radius: 40px;
+    padding: 8px;
+    /* margin-bottom: 60px; */
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-btn {
+    border: none;
+    background: transparent;
+    padding: 12px 22px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #444;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .25s;
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: #21367d;
+}
+
+.tab-btn.active {
+    background: linear-gradient(90deg, #7b3c39, #21367d);
+    color: #fff;
+}
+
+/*=========================================
+Service Row
+=========================================*/
+
+.service-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 50px 0;
+    border-bottom: 1px solid #eee;
+    scroll-margin-top: 110px;
+    transition: opacity .3s ease;
+}
+
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-row:last-child {
+    border-bottom: none;
+}
+
+/* Hidden must come AFTER :last-child so equal-specificity ties resolve correctly */
+.service-row.hidden {
+    display: none;
+}
+
+/*=========================================
+Text
+=========================================*/
+
+.service-text {
+    flex: 1;
+}
+
+.service-text h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 16px;
+}
+
+.service-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.service-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+
+.service-text ul li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 12px;
+    padding-left: 22px;
+    position: relative;
+}
+
+.service-text ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #7b3c39, #21367d);
+}
+
+/*=========================================
+Button
+=========================================*/
+
+.btn-service {
+    display: inline-block;
+    padding: 13px 28px;
+    background: linear-gradient(90deg, #7b3c39, #21367d);
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.btn-service:hover {
+    opacity: .9;
+}
+
+/*=========================================
+Image
+=========================================*/
+
+.service-image {
+    flex: 1;
+}
+
+.service-image img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+/*=========================================
+Responsive
+=========================================*/
+
+@media (max-width: 768px) {
+
+    .service-row,
+    .service-row.reverse {
+        flex-direction: column;
+    }
+}
+
+/*=========================================
+Filter - Hidden State
+=========================================*/
+
+.service-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    scroll-margin-top: 110px;
+    transition: opacity .3s ease;
+}
+
+.service-row.hidden {
+    display: none;
+}
+
+.service-row:last-child {
+    border-bottom: none;
+}

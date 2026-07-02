@@ -316,3 +316,128 @@ document.addEventListener('DOMContentLoaded', function () {
 
     observer.observe(whyProcess);
 });
+
+// ABOUT US PAGE SECTION
+document.addEventListener('DOMContentLoaded', function () {
+    const complianceContent = document.querySelector('.compliance-content');
+    const complianceImage = document.querySelector('.compliance-image');
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                complianceContent.classList.add('animate-in');
+                complianceImage.classList.add('animate-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    observer.observe(document.querySelector('.compliance-section'));
+});
+
+// EXPERIANCE SECTION
+document.addEventListener('DOMContentLoaded', function () {
+    const counters = document.querySelectorAll('.stats-section .counter');
+
+    function animateCounter(el) {
+        const target = parseInt(el.getAttribute('data-count'), 10);
+        const suffix = el.textContent.replace(/[0-9]/g, ''); // grabs "+", "%", or "₹" prefix/suffix
+        const isRupee = el.textContent.trim().startsWith('₹');
+        const duration = 1500;
+        const startTime = performance.now();
+
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const value = Math.floor(progress * target);
+
+            el.textContent = isRupee ? '₹' + value : value + suffix.replace('₹', '');
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                el.textContent = isRupee ? '₹' + target : target + suffix.replace('₹', '');
+            }
+        }
+
+        requestAnimationFrame(update);
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                counters.forEach(function (counter) {
+                    animateCounter(counter);
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    observer.observe(document.querySelector('.stats-section'));
+});
+
+// SERICES PAGE 
+// SERVICES SECTION
+$(function () {
+    const $tabs = $('.tab-btn');
+    const $rows = $('.service-row');
+
+    let scrollspyEnabled = true;
+
+    function setActiveTab(target) {
+        $tabs.each(function () {
+            $(this).toggleClass('active', $(this).data('target') === target);
+        });
+    }
+
+    function filterServices(target) {
+        if (target === 'all') {
+            $rows.removeClass('hidden');
+            scrollspyEnabled = true;
+        } else {
+            $rows.each(function () {
+                $(this).toggleClass('hidden', $(this).attr('id') !== target);
+            });
+            scrollspyEnabled = false;
+        }
+    }
+
+    // Remove any previously bound click handlers on these tabs before binding fresh ones
+    $tabs.off('click.serviceTabs').on('click.serviceTabs', function () {
+        const target = $(this).data('target');
+
+        setActiveTab(target);
+        filterServices(target);
+
+        const $section = $('.services-list-section');
+        if ($section.length) {
+            $('html, body').animate({
+                scrollTop: $section.offset().top
+            }, 500);
+        }
+    });
+
+    // Scrollspy: only runs when "All" is active (all rows visible)
+    const observer = new IntersectionObserver(function (entries) {
+        if (!scrollspyEnabled) return;
+
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                setActiveTab(id);
+            }
+        });
+    }, {
+        rootMargin: '-40% 0px -50% 0px',
+        threshold: 0
+    });
+
+    $rows.each(function () {
+        observer.observe(this);
+    });
+});
