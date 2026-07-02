@@ -3,7 +3,7 @@ Hero Section
 ====================================*/
 
 .hero-section {
-
+    margin-top: 5%;
     padding: 55px 0 20px;
 
 }
@@ -845,6 +845,140 @@ Hover
 }
 
 /*==================================
+Section
+==================================*/
+
+.info-section {
+    width: 100%;
+    background: #fff;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*==================================
+Card
+==================================*/
+
+.info-card {
+    position: relative;
+    height: 300px;
+    padding: 20px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    border-right: 1px solid #ececec;
+}
+
+.info-card:last-child {
+    border-right: none;
+}
+
+/* Hover Background */
+
+.info-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            #22357d 0%,
+            #26386d 35%,
+            #523b58 70%,
+            #8d463d 100%);
+    opacity: 0;
+    transition: .35s;
+}
+
+.info-card:hover::before {
+    opacity: 1;
+}
+
+/*==================================
+Content
+==================================*/
+
+.info-content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.info-content h3 {
+    margin: 0;
+    font-size: 42px;
+    line-height: 1.12;
+    font-weight: 300;
+    color: #222;
+    transition: .3s;
+}
+
+/* Answer paragraph - hidden by default, revealed on hover */
+
+.info-content p.info-answer {
+    margin: 16px 0 0;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #fff;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .4s ease, opacity .3s ease .1s;
+}
+
+.info-card:hover .info-content p.info-answer {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/*==================================
+Footer
+==================================*/
+
+.info-footer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-footer span {
+    font-size: 18px;
+    color: #333;
+}
+
+.info-footer svg {
+    width: 56px;
+    fill: none;
+    stroke: #111;
+    stroke-width: 2;
+    transition: .3s;
+}
+
+/*==================================
+Hover
+==================================*/
+
+.info-card:hover h3 {
+    display: none
+}
+
+.info-card:hover span {
+    color: #fff;
+}
+
+.info-card:hover svg {
+    stroke: #fff;
+    transform: translateX(8px);
+}
+
+/*==================================
 Why Choose Us
 ==================================*/
 
@@ -923,12 +1057,9 @@ Item
 }
 
 .circle {
-
-    width: 180px;
-    height: 180px;
-
+    width: 150px;
+    height: 150px;
     margin: 0 auto;
-
     border-radius: 50%;
 
     background: linear-gradient(90deg, #7b3c39, #2d5da9);
@@ -1018,16 +1149,11 @@ Trusted Businesses
 }
 
 .section-heading h2 {
-
-    font-size: 45px;
-
-    font-weight: 300;
-
-    color: #1f1f1f;
-
+    font-size: 62px;
+    font-weight: 400;
+    color: #222;
+    margin-bottom: 18px;
     line-height: 1.1;
-
-    margin-bottom: 20px;
 }
 
 .section-heading h3 {
@@ -1105,6 +1231,30 @@ Trusted Businesses
     object-fit: contain;
 
     display: block;
+}
+
+/*=============================
+Why Choose Us — Animation
+=============================*/
+
+.process-item,
+.process-arrow {
+    opacity: 0;
+    transform: translateX(-90px);
+    transition: transform .8s ease, opacity .8s ease;
+}
+
+.process-item.animate-in,
+.process-arrow.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* This one stays visible in its actual position from the start */
+.process-item.static-item {
+    opacity: 1;
+    transform: translateX(0);
+    transition: none;
 }
 
 /*=========================================

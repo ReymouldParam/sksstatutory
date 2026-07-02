@@ -255,7 +255,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (entry.isIntersecting) {
                 aboutContent.classList.add('animate-in');
                 aboutImage.classList.add('animate-in');
-                observer.unobserve(entry.target);
+            } else {
+                aboutContent.classList.remove('animate-in');
+                aboutImage.classList.remove('animate-in');
             }
         });
     }, {
@@ -265,4 +267,52 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     observer.observe(aboutSection);
+});
+
+// Why chooose us section 
+document.addEventListener('DOMContentLoaded', function () {
+    const whyProcess = document.querySelector('.why-process');
+    const items = Array.from(whyProcess.children).filter(
+        (el) => !el.classList.contains('static-item')
+    );
+
+    let timeouts = [];
+
+    function clearAllTimeouts() {
+        timeouts.forEach(function (t) {
+            clearTimeout(t);
+        });
+        timeouts = [];
+    }
+
+    function playAnimation() {
+        clearAllTimeouts();
+        items.forEach(function (el, index) {
+            const t = setTimeout(function () {
+                el.classList.add('animate-in');
+            }, index * 200);
+            timeouts.push(t);
+        });
+    }
+
+    function resetAnimation() {
+        clearAllTimeouts();
+        items.forEach(function (el) {
+            el.classList.remove('animate-in');
+        });
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                playAnimation();
+            } else {
+                resetAnimation();
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    observer.observe(whyProcess);
 });
