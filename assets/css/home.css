@@ -63,7 +63,7 @@ Buttons
 
     gap: 14px;
 
-    margin-top: 36px;
+    margin-top: 20px;
 
 }
 
@@ -97,21 +97,15 @@ Stats
 ====================================*/
 
 .hero-stats {
-
     display: flex;
-
     gap: 70px;
-
-    margin-top: 60px;
+    margin-top: 20px;
 
 }
 
 .stat h2 {
-
-    font-size: 58px;
-
+    font-size: 46px;
     font-weight: 500;
-
     color: #111;
 
 }
@@ -191,11 +185,8 @@ Experience
 }
 
 .experience-box h3 {
-
-    font-size: 60px;
-
-    font-weight: 500;
-
+    font-size: 46px;
+    font-weight: 400;
     line-height: 1;
 
 }
@@ -212,6 +203,31 @@ Experience
 
 }
 
+
+/*====================================
+Hero Animation
+====================================*/
+
+.hero-left,
+.hero-right {
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
+}
+
+.hero-left {
+    transform: translateX(-120px);
+}
+
+.hero-right {
+    transform: translateX(120px);
+}
+
+.hero-left.animate-in,
+.hero-right.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /**************** Section 2 */
 /*=========================
 Services
@@ -220,10 +236,8 @@ Services
 .services-section {}
 
 .services-heading {
-
     text-align: center;
     margin-bottom: 20px;
-
 }
 
 .services-heading h2 {
@@ -232,11 +246,9 @@ Services
 }
 
 .services-heading p {
-
     margin-top: 5px;
     color: #555;
     font-size: 20px;
-
 }
 
 
@@ -245,124 +257,97 @@ Layout
 =========================*/
 
 .services-wrapper {
-
     display: grid;
     grid-template-columns: 480px 1fr;
-    gap: 90px;
+    gap: 40px;
     align-items: start;
-
 }
 
-
 /*=========================
-Left
+Left — Sticky Image
 =========================*/
 
 .services-left {
-
     position: relative;
-
 }
 
 .sticky-image {
-
     position: sticky;
-
     top: 80px;
+    overflow: hidden;
+}
 
+.sticky-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.6) 25%,
+            rgba(0, 0, 0, 0.25) 50%,
+            rgba(0, 0, 0, 0) 75%);
+    z-index: 1;
 }
 
 .sticky-image img {
-
     width: 100%;
     height: 620px;
     object-fit: cover;
-
+    display: block;
 }
 
 .image-content {
-
     position: absolute;
-
-    left: 35px;
-    bottom: 35px;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
     color: #fff;
-
+    z-index: 2;
 }
 
 .image-content h3 {
-
-    font-size: 42px;
-    line-height: 1.2;
+    font-size: 44px;
+    line-height: 1.15;
     font-weight: 400;
-
+    letter-spacing: -0.5px;
 }
 
-
 /*=========================
-Right
+Right — Scrollable, hidden scrollbar
 =========================*/
 
 .services-right {
-
     height: 620px;
-
     overflow-y: auto;
-
     padding-right: 15px;
-
     display: flex;
     flex-direction: column;
-    gap: 55px;
+    gap: 0;
 
+    /* hide scrollbar but keep scroll working */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge legacy */
 }
-
-/* Scrollbar */
 
 .services-right::-webkit-scrollbar {
-
-    width: 7px;
-
-}
-
-.services-right::-webkit-scrollbar-thumb {
-
-    background: #17337e;
-
+    display: none;
+    /* Chrome, Safari, Edge Chromium */
 }
 
 
 /*=========================
-Cards
+Cards — Zigzag placement
 =========================*/
-
 .service-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 25px;
+    gap: 20px;
     min-height: 140px;
     padding: 20px;
-    transition: .3s;
-
-}
-
-.service-card img {
-
-    width: 80px;
-
-}
-
-.service-card h4 {
-    font-size: 32px;
-    font-weight: 400;
-}
-
-/* .service-card:hover {
-    transform: translateX(12px);
-} */
-
-.service-card {
+    max-width: 280px;
+    opacity: 0;
     transform: translateY(40px);
     transition: .5s;
 }
@@ -370,7 +355,38 @@ Cards
 .service-card.active {
     opacity: 1;
     transform: translateY(0);
+}
 
+.service-card img {
+    width: 120px;
+}
+
+.service-card h4 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* Odd cards (1st, 3rd, 5th...) sit left */
+.service-card:nth-child(odd) {
+    align-self: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+}
+
+/* Even cards (2nd, 4th, 6th...) sit right, shifted lower */
+.service-card:nth-child(even) {
+    align-self: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 60px;
+}
+
+/* Slight extra stagger so odd cards after the first aren't flush with the one above */
+.service-card:nth-child(odd):not(:first-child) {
+    margin-top: 20px;
 }
 
 /* ************************ Marquee */
@@ -419,23 +435,15 @@ About Section
 =========================================*/
 
 .about-section {
-
     padding: 90px 0;
-
     background: #ffffff;
-
 }
 
 .about-wrapper {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 90px;
-
 }
 
 
@@ -444,9 +452,7 @@ Left
 =========================================*/
 
 .about-content {
-
     width: 48%;
-
 }
 
 .about-content h2 {
@@ -473,7 +479,6 @@ Left
     color: #555;
     line-height: 1.4;
     margin-bottom: 18px;
-
 }
 
 
@@ -483,18 +488,50 @@ Right
 
 .about-image {
     width: 46%;
+    overflow: hidden;
 }
 
 .about-image img {
-
     width: 100%;
-
     height: 520px;
-
     object-fit: cover;
-
     display: block;
+}
 
+
+/*=========================================
+About Animation
+=========================================*/
+
+/* Left content - slide in from left */
+.about-content {
+    opacity: 0;
+    transform: translateX(-180px);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.about-content.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Right image - zoom out effect */
+.about-image {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.about-image.animate-in {
+    opacity: 1;
+}
+
+.about-image img {
+    transform: scale(1.4);
+    transition: transform 1.2s ease;
+}
+
+.about-image.animate-in img {
+    transform: scale(1);
 }
 
 /*=========================================
@@ -1117,15 +1154,10 @@ Testimonials
 /*--------------------------------*/
 
 .testimonial-card {
-
     background: linear-gradient(180deg, #7b403d 0%, #21367d 100%);
-
-    padding: 38px;
-
-    height: 330px;
-
+    padding: 20px;
+    height: 270px;
     color: #fff;
-
     transition: .3s;
 }
 
@@ -1201,7 +1233,7 @@ Testimonials
 /*--------------------------------*/
 
 .testimonial-card p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.7;
     color: #fff;
     margin: 0;
