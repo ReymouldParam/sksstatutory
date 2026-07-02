@@ -29,10 +29,9 @@ Left
 }
 
 .hero-left h1 {
-
-    font-family: 'Poppins', sans-serif;
+    font-family: "Arimo", sans-serif;
     font-size: 62px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.08;
     color: #111;
 
@@ -45,17 +44,12 @@ Left
 }
 
 .hero-left p {
-
+    font-family: "Arimo", sans-serif;
     margin-top: 24px;
-
     width: 470px;
-
     color: #666;
-
-    font-size: 18px;
-
+    font-size: 20px;
     line-height: 1.6;
-
 }
 
 
@@ -123,19 +117,12 @@ Stats
 }
 
 .stat span {
-
     display: block;
-
     margin-top: 10px;
-
-    font-size: 14px;
-
+    font-size: 20px;
     line-height: 1.5;
-
     color: #777;
-
     text-transform: uppercase;
-
 }
 
 
@@ -185,30 +172,21 @@ Experience
 ====================================*/
 
 .experience-box {
-
     position: absolute;
-
-    left: 30px;
-
+    left: 0px;
     bottom: 25px;
-
     width: 180px;
-
     height: 180px;
-
     background: rgba(255, 255, 255, .18);
-
-    backdrop-filter: blur(8px);
-
+    backdrop-filter: blur(2px);
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
-
     color: #fff;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #ffffff;
 
 }
 
@@ -249,17 +227,15 @@ Services
 }
 
 .services-heading h2 {
-
-    font-size: 54px;
-    font-weight: 500;
-
+    font-size: 62px;
+    font-weight: 400;
 }
 
 .services-heading p {
 
-    margin-top: 12px;
+    margin-top: 5px;
     color: #555;
-    font-size: 18px;
+    font-size: 20px;
 
 }
 
@@ -474,45 +450,29 @@ Left
 }
 
 .about-content h2 {
-
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 56px;
-
+    font-family: "Arimo", sans-serif;
+    font-size: 62px;
     font-weight: 400;
-
     color: #2d2d2d;
-
     margin-bottom: 18px;
-
     line-height: 1;
-
 }
 
 .about-content h3 {
-
-    font-family: 'Inter', sans-serif;
-
+    font-family: "Arimo", sans-serif;
     font-size: 34px;
-
     font-weight: 600;
-
     color: #2d2d2d;
-
     line-height: 1.35;
-
     margin-bottom: 24px;
-
     max-width: 520px;
-
 }
 
 .about-content p {
-    font-size: 16px;
+    font-size: 20px;
     color: #555;
-    line-height: 1.8;
+    line-height: 1.4;
     margin-bottom: 18px;
-    max-width: 560px;
 
 }
 
@@ -624,7 +584,7 @@ Laptop
 @media(max-width:1400px) {
 
     .knowledge-content h2 {
-        font-size: 50px;
+        font-size: 62px;
     }
 
     .content-inner {
@@ -715,7 +675,7 @@ Card
 
 .info-card {
     position: relative;
-    /* height: 435px; */
+    height: 350px;
     padding: 20px 30px 30px;
     display: flex;
     flex-direction: column;
@@ -762,28 +722,18 @@ Content
 ==================================*/
 
 .info-content {
-
     position: relative;
-
     z-index: 2;
-
     flex: 1;
 }
 
 /* Fixed width is the key */
 
 .info-content h3 {
-
-    /* width: 430px; */
-
     margin: 0;
-
-    font-size: 48px;
-
+    font-size: 42px;
     line-height: 1.12;
-
     font-weight: 300;
-
     color: #222;
 }
 
@@ -883,16 +833,16 @@ Heading
 }
 
 .why-heading h2 {
-    font-size: 72px;
-    font-weight: 300;
+    font-size: 62px;
+    font-weight: 400;
     color: #222;
     margin-bottom: 18px;
     line-height: 1.1;
 }
 
 .why-heading h3 {
-    font-size: 34px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 400;
     color: #222;
     margin-bottom: 18px;
 }
@@ -904,7 +854,7 @@ Heading
 .why-heading p {
     max-width: 1080px;
     margin: auto;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.5;
     color: #444;
 }
@@ -987,26 +937,17 @@ Text
 =============================*/
 
 .process-item h4 {
-
     margin-top: 22px;
-
-    font-size: 18px;
-
+    font-size: 20px;
     font-weight: 700;
-
     color: #222;
-
     line-height: 1.3;
 }
 
 .process-item p {
-
     margin-top: 8px;
-
-    font-size: 15px;
-
+    font-size: 18px;
     color: #333;
-
     line-height: 1.45;
 }
 
@@ -1053,13 +994,9 @@ Trusted Businesses
 }
 
 .section-heading h3 {
-
     font-size: 18px;
-
-    font-weight: 700;
-
+    font-weight: 500;
     color: #232323;
-
     margin-bottom: 18px;
 }
 
@@ -1084,13 +1021,9 @@ Trusted Businesses
 /*====================*/
 
 .clients-grid {
-
     display: grid;
-
     grid-template-columns: repeat(5, 1fr);
-
-    gap: 45px;
-
+    gap: 25px;
     align-items: center;
 }
 
@@ -1142,11 +1075,8 @@ Testimonials
 =========================================*/
 
 .testimonial-section {
-
-    padding: 70px 0 30px;
-
+    padding: 30px 0 30px;
     background: #fff;
-
     overflow: hidden;
 }
 
@@ -1158,14 +1088,11 @@ Testimonials
 }
 
 .testimonial-heading h2 {
-
-    font-size: 60px;
-
-    font-weight: 300;
-
+    font-size: 62px;
+    font-weight: 400;
     color: #222;
-
     line-height: 1;
+    margin-bottom: -25px;
 }
 
 /*--------------------------------*/
@@ -1274,14 +1201,11 @@ Testimonials
 /*--------------------------------*/
 
 .testimonial-card p {
-
-    font-size: 17px;
-
+    font-size: 20px;
     line-height: 1.7;
-
     color: #fff;
-
     margin: 0;
+    font-weight: 400;
 }
 
 /*--------------------------------*/
