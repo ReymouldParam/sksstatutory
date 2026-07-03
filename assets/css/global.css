@@ -235,18 +235,19 @@ Left — Info Grid
 }
 
 .info-block p {
-    font-size: 17px;
-    font-weight: 700;
-    color: #1f1f1f;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
     text-decoration: none;
     display: block;
 }
 
 .contact-number {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 400;
     color: #fff;
     text-decoration: none;
+
 }
 
 /*============================*/

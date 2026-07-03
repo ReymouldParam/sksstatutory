@@ -129,7 +129,7 @@ Main Grid
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 380px 1fr;
+    grid-template-columns: 450px 1fr;
     /* gap: 30px; */
     align-items: flex-start;
 }
@@ -153,7 +153,7 @@ Left - Info
     margin-bottom: 26px;
 }
 
-.info-block {
+.info-block-main {
     margin-bottom: 22px;
 }
 
