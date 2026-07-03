@@ -3,7 +3,6 @@ Hero Section
 ====================================*/
 
 .hero-section {
-    margin-top: 5%;
     padding: 55px 0 20px;
 
 }
@@ -227,6 +226,102 @@ Hero Animation
     opacity: 1;
     transform: translateX(0);
 }
+
+@media (max-width:991px) {
+
+    .hero-section {
+        padding: 40px 0 50px;
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-left h1 {
+        font-size: 42px;
+        line-height: 1.15;
+    }
+
+    .hero-left p {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-stats {
+        gap: 35px;
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 430px;
+        border-radius: 30px;
+    }
+
+    .experience-box {
+        width: 140px;
+        height: 140px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .hero-section {
+        padding: 25px 0 40px;
+    }
+
+    .hero-left h1 {
+        font-size: 34px;
+    }
+
+    .hero-left p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .stat h2 {
+        font-size: 34px;
+    }
+
+    .stat span {
+        font-size: 15px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .experience-box {
+        width: 110px;
+        height: 110px;
+    }
+
+    .experience-box h3 {
+        font-size: 32px;
+    }
+
+    .experience-box p {
+        font-size: 12px;
+    }
+
+}
+
 
 /**************** Section 2 */
 /*=========================
@@ -542,13 +637,13 @@ Knowledge Section
     width: 100%;
     background: #fff;
     overflow: hidden;
-    height: 50dvh;
+    /* height: 50dvh; */
 }
 
 .knowledge-wrapper {
     display: grid;
     grid-template-columns: 42% 58%;
-    height: 530px;
+    /* height: 530px; */
     overflow: hidden;
 }
 
@@ -1170,7 +1265,7 @@ Trusted Businesses
 
 .section-heading p {
 
-    width: 980px;
+    /* width: 980px; */
 
     margin: auto;
 

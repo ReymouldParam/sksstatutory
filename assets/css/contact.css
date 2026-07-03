@@ -139,11 +139,13 @@ Left - Info
 =========================================*/
 
 .contact-info {
-    /* background: #fff; */
-    /* border: 1px solid #eee; */
+    background: #fff;
     border-radius: 14px;
-    padding:0;
-    margin-left: 40px;
+    padding: 0;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .contact-info h2 {

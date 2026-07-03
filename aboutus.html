@@ -15,6 +15,7 @@
     <!-- Project CSS -->
     <link rel="stylesheet" href="./assets/css/global.css" />
     <link rel="stylesheet" href="./assets/css/aboutus.css" />
+    <link rel="stylesheet" href="./assets/css/aboutus-responsive.css" />
 
 </head>
 
@@ -23,31 +24,24 @@
 
         <div class="container">
             <div class="logo">
-                <a href="#">
-                    SKS
-                </a>
+                <a href=".">SKS</a>
             </div>
-            <nav class="navigation">
+
+            <nav class="navigation" id="navigation">
                 <ul>
-                    <li><a href="#">About</a></li>
-
-                    <li><a href="#">Services</a></li>
-
-                    <li><a href="#">FAQ</a></li>
-
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="." class="active">Home</a></li>
+                    <li><a href="aboutus">About</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="contact">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="header-buttons">
-                <a href="#" class="btn-call">
-                    Call Now
-                </a>
-                <a href="#" class="btn-consultation">
-                    Free Consultation
-                </a>
+                <a href="#" class="btn-call">Call Now</a>
+                <a href="#" class="btn-consultation">Free Consultation</a>
             </div>
-            <div class="mobile-toggle">
+
+            <div class="mobile-toggle" id="mobileToggle">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
@@ -330,6 +324,13 @@
             </div>
         </div>
     </footer>
+    <!-- pop-up card  -->
+    <div id="popup-overlay"></div>
+    <div id="popup-message">
+        <h2 id="popup-heading"></h2>
+        <p id="popup-para"></p>
+        <button id="close-btn">Close</button>
+    </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

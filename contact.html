@@ -15,6 +15,7 @@
     <!-- Project CSS -->
     <link rel="stylesheet" href="./assets/css/global.css" />
     <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/contact-responsive.css" />
 
 </head>
 
@@ -22,31 +23,24 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="#">
-                    SKS
-                </a>
+                <a href=".">SKS</a>
             </div>
-            <nav class="navigation">
+
+            <nav class="navigation" id="navigation">
                 <ul>
-                    <li><a href="#">About</a></li>
-
-                    <li><a href="#">Services</a></li>
-
-                    <li><a href="#">FAQ</a></li>
-
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="." class="active">Home</a></li>
+                    <li><a href="aboutus">About</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="contact">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="header-buttons">
-                <a href="#" class="btn-call">
-                    Call Now
-                </a>
-                <a href="#" class="btn-consultation">
-                    Free Consultation
-                </a>
+                <a href="#" class="btn-call">Call Now</a>
+                <a href="#" class="btn-consultation">Free Consultation</a>
             </div>
-            <div class="mobile-toggle">
+
+            <div class="mobile-toggle" id="mobileToggle">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
@@ -100,12 +94,12 @@
 
                     <div class="info-block">
                         <span class="info-label">Service Area</span>
-                        <p class="info-value">Pan-India — all 28 states &amp; 8 UTs</p>
+                        <a class="info-value">Pan-India — all 28 states &amp; 8 UTs</a>
                     </div>
 
                     <div class="info-block">
                         <span class="info-label">Business Hours</span>
-                        <p class="info-value">Monday – Saturday: 9:00 AM – 7:00 PM</p>
+                        <a class="info-value">Monday – Saturday: 9:00 AM – 7:00 PM</a>
                     </div>
 
                     <div class="map-embed">
@@ -122,54 +116,61 @@
                     <h3>Send Us a Message</h3>
                     <p class="form-subtext">We'll respond within 2 business hours.</p>
 
-                    <form class="contact-request-form">
+                    <form class="contact-request-form" action="contact.php" method="POST">
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Full Name</label>
-                                <input type="text" placeholder="First Name">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                             </div>
+
                             <div class="form-group">
-                                <label>Phone Number</label>
-                                <input type="text" placeholder="Last Name">
+                                <label for="number">Phone Number *</label>
+                                <input  id="number" name="number" placeholder="Enter phone number" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label>E-Mail*</label>
-                                <input type="email" placeholder="Email">
+                                <label for="email">E-Mail *</label>
+                                <input type="email" id="email" name="email" placeholder="Enter email address" required>
                             </div>
+
                             <div class="form-group">
-                                <label>Services*</label>
-                                <input type="text" placeholder="Services">
+                                <label for="service">Service *</label>
+                                <input type="text" id="service" name="service" placeholder="Required service" required>
                             </div>
                         </div>
 
                         <div class="form-group full-width">
-                            <label>Services*</label>
-                            <input type="text" placeholder="Services">
+                            <label for="organization">Company Name *</label>
+                            <input type="text" id="organization" name="organization" placeholder="Enter company name"
+                                required>
                         </div>
 
                         <div class="form-group full-width">
-                            <label>Number of Employees*</label>
-                            <select>
+                            <label for="employees">Number of Employees *</label>
+                            <select id="employees" name="employees" required>
                                 <option value="">Select range</option>
-                                <option value="1-10">1 – 10</option>
-                                <option value="11-50">11 – 50</option>
-                                <option value="51-200">51 – 200</option>
+                                <option value="1-10">1 - 10</option>
+                                <option value="11-50">11 - 50</option>
+                                <option value="51-200">51 - 200</option>
                                 <option value="200+">200+</option>
                             </select>
                         </div>
 
                         <div class="form-group full-width">
-                            <label>Message / Query*</label>
-                            <textarea rows="4" placeholder="Select range"></textarea>
+                            <label for="dropMessage">Message / Query *</label>
+                            <textarea id="dropMessage" name="dropMessage" rows="5" placeholder="Write your message"
+                                required></textarea>
                         </div>
 
                         <div class="form-checkbox">
-                            <input type="checkbox" id="auditCheck">
-                            <label for="auditCheck">I'd like a Free 1-Hour Compliance Audit call</label>
+                            <input type="checkbox" id="auditCheck" name="auditRequest" value="Yes">
+
+                            <label for="auditCheck">
+                                I'd like a Free 1-Hour Compliance Audit call
+                            </label>
                         </div>
 
                         <button type="submit" class="btn-submit">
@@ -271,6 +272,22 @@
             </div>
         </div>
     </footer>
+    <!-- pop-up card  -->
+    <div id="popup-overlay"></div>
+    <div id="popup-message">
+        <h2 id="popup-heading"></h2>
+        <p id="popup-para"></p>
+        <button id="close-btn">Close</button>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Slick -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Project JS -->
+    <script src="./assets/js-functions/home.js"></script>
 </body>
 
-</html>
+</html>s

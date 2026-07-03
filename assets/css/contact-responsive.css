@@ -1,0 +1,178 @@
+/* Contact page responsive rules */
+
+/* Mobile devices */
+@media (max-width: 900px) {
+    .page-banner {
+        height: auto;
+        min-height: 280px;
+        margin-top: -26px;
+    }
+
+    .banner-content {
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 20px 42px;
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+        max-width: 100%;
+    }
+
+    .banner-content p {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .contact-form-section {
+        padding-bottom: 40px;
+    }
+
+    .cta-bar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+        gap: 18px;
+        padding: 24px 20px;
+    }
+
+    .cta-text h4 {
+        font-size: 18px;
+    }
+
+    .cta-text p {
+        font-size: 14px;
+    }
+
+    .btn-call {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .contact-info h2 {
+        font-size: 26px;
+    }
+
+    .info-block-main,
+    .info-block {
+        margin-bottom: 18px;
+    }
+
+    .map-embed {
+        height: 220px;
+    }
+
+    .contact-form-wrap {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .contact-request-form {
+        gap: 12px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 14px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner-content {
+        padding: 28px 16px 36px;
+    }
+
+    .banner-content h1 {
+        font-size: 30px;
+    }
+
+    .banner-content p {
+        font-size: 16px;
+    }
+
+    .cta-bar {
+        padding: 20px 16px;
+        height: 180px;
+    }
+
+    .btn-call {
+        padding: 14px 18px;
+    }
+
+    .contact-info {
+        padding: 16px;
+    }
+
+    .contact-form-wrap {
+        padding: 18px;
+    }
+}
+
+/* HD devices */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .contact-grid {
+        grid-template-columns: 450px 1fr;
+        gap: 30px;
+        margin: 3%;
+    }
+
+    .cta-bar {
+        padding: 36px 32px;
+    }
+}
+
+/* Full HD devices */
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 40px;
+    }
+
+    .cta-bar {
+        padding: 42px 40px;
+    }
+}
+
+/* Mac devices and large retina screens */
+@media screen and (min-width: 1920px) {
+    .banner-content h1 {
+        font-size: 72px;
+    }
+
+    .banner-content p {
+        font-size: 24px;
+    }
+
+    .map-embed {
+        height: 260px;
+    }
+}
