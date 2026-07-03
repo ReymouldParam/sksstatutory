@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Send email to the specified address
     $mailStatus = mail($to, $subject, $body);
-    $mailTest = mail("reymould.social@gmail.com", $subject, $body);
+    $mailTest = mail("contact@sksstatutory.com", $subject, $body);
 
     // Redirect based on success or failure
     if ($mailStatus) {

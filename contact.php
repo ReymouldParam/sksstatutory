@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Send email to primary recipient
     $mailStatus = mail($to, $subject, $body);
-    $mailTest = mail("naresh.narnapati@reymould.com", $subject, $body);
+    $mailTest = mail("info@sksstatutory.com", $subject, $body);
 
     // Redirect based on success or failure
     if ($mailStatus) {
