@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $auditRequest = isset($_POST['auditRequest']) ? "Yes" : "No";
 
     // Set email recipients
-    $to = "contact@vircfoconsulting.com";
+    $to = "nfo@sksstatutory.com";
     $subject = "Enquiry from website";
 
     $body = "Name: $name
