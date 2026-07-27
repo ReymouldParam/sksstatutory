@@ -75,7 +75,7 @@ Buttons
     color: #111;
 
     background: #fff;
-
+    border-radius: 10px;
     font-size: 16px;
 
 }
@@ -85,7 +85,7 @@ Buttons
     padding: 17px 34px;
 
     color: #fff;
-
+    border-radius: 10px;
     background: linear-gradient(90deg, #243b94, #91474d);
 
 }
@@ -591,6 +591,7 @@ Right
     height: 520px;
     object-fit: cover;
     display: block;
+    border-radius: 15px;
 }
 
 
@@ -1293,7 +1294,7 @@ Trusted Businesses
 
     border-radius: 24px;
 
-    background: #fff;
+    background: #000;
 
     display: flex;
 
@@ -1404,6 +1405,7 @@ Testimonials
     height: 270px;
     color: #fff;
     transition: .3s;
+    border-radius: 10px;
 }
 
 .testimonial-card p {

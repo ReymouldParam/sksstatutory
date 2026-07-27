@@ -1,7 +1,6 @@
 /*=========================================
 Page Banner (shared - About / Services / Contact)
 =========================================*/
-
 .page-banner {
     position: relative;
     width: 100%;
@@ -65,6 +64,10 @@ Page Banner (shared - About / Services / Contact)
 /*=========================================
 Contact Form Section
 =========================================*/
+.form-container {
+    width: 100%;
+    max-width: 100%;
+}
 
 .contact-form-section {
     padding: 0 0 90px;
@@ -123,6 +126,11 @@ Top CTA Bar
     background: rgba(255, 255, 255, .15);
 }
 
+.container {
+    max-width: 1700px;
+    padding: 0 50px;
+}
+
 /*=========================================
 Main Grid
 =========================================*/
@@ -132,6 +140,8 @@ Main Grid
     grid-template-columns: 450px 1fr;
     /* gap: 30px; */
     align-items: flex-start;
+    width: 90%;
+    margin: auto;
 }
 
 /*=========================================

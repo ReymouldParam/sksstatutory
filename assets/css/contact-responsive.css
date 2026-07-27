@@ -1,22 +1,106 @@
-/* Contact page responsive rules */
+/*=========================================
+Responsive Styles
+=========================================*/
 
-/* Mobile devices */
-@media (max-width: 900px) {
-    .page-banner {
-        height: auto;
-        min-height: 280px;
-        margin-top: -26px;
+/*-----------------------------------------
+Large Desktop (1600px - 1919px)
+-----------------------------------------*/
+@media (min-width: 1600px) and (max-width: 1919px) {
+
+    .container {
+        max-width: 1400px;
     }
 
-    .banner-content {
-        height: auto;
-        justify-content: center;
-        align-items: center;
-        padding: 32px 20px 42px;
+    .page-banner {
+        height: 680px;
     }
 
     .banner-content h1 {
-        font-size: 36px;
+        font-size: 74px;
+    }
+
+    .banner-content p {
+        font-size: 26px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 480px 1fr;
+        gap: 50px;
+    }
+
+    .map-embed {
+        height: 230px;
+    }
+
+}
+
+/*-----------------------------------------
+Desktop (1280px - 1599px)
+-----------------------------------------*/
+@media (min-width: 1280px) and (max-width: 1599px) {
+
+    .contact-grid {
+        grid-template-columns: 430px 1fr;
+        gap: 40px;
+        width: 92%;
+    }
+
+}
+
+/*-----------------------------------------
+Laptop (992px - 1279px)
+-----------------------------------------*/
+@media (min-width: 992px) and (max-width: 1279px) {
+
+    .page-banner {
+        height: 520px;
+    }
+
+    .banner-content {
+        padding: 0 30px 50px;
+    }
+
+    .banner-content h1 {
+        font-size: 56px;
+    }
+
+    .banner-content p {
+        font-size: 20px;
+    }
+
+    .cta-bar {
+        padding: 30px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 340px 1fr;
+        gap: 35px;
+        width: 94%;
+    }
+
+    .contact-info h2 {
+        font-size: 26px;
+    }
+
+}
+
+/*-----------------------------------------
+Tablet (768px - 991px)
+-----------------------------------------*/
+@media (max-width: 991px) {
+
+    .page-banner {
+        height: 420px;
+        margin-top: -70px;
+    }
+
+    .banner-content {
+        justify-content: flex-end;
+        padding: 0 24px 50px;
+    }
+
+    .banner-content h1 {
+        font-size: 42px;
         max-width: 100%;
     }
 
@@ -26,15 +110,76 @@
     }
 
     .contact-form-section {
-        padding-bottom: 40px;
+        padding-bottom: 60px;
     }
 
     .cta-bar {
         flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
         text-align: left;
         gap: 18px;
-        padding: 24px 20px;
+        padding: 28px 24px;
+    }
+
+    .btn-call {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        width: 92%;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-form-wrap {
+        margin: 0;
+        padding: 24px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .map-embed {
+        height: 260px;
+    }
+
+}
+
+/*-----------------------------------------
+Mobile (576px - 767px)
+-----------------------------------------*/
+@media (max-width: 767px) {
+
+    .page-banner {
+        height: 360px;
+    }
+
+    .banner-content {
+        padding: 0 20px 40px;
+    }
+
+    .banner-content h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .banner-content p {
+        font-size: 16px;
+    }
+
+    .cta-bar {
+        padding: 22px 20px;
     }
 
     .cta-text h4 {
@@ -45,30 +190,70 @@
         font-size: 14px;
     }
 
-    .btn-call {
-        width: 100%;
-        justify-content: center;
+    .contact-info h2 {
+        font-size: 24px;
     }
 
-    .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .contact-info {
-        width: 100%;
-        margin-left: 0;
+    .contact-form-wrap {
         padding: 20px;
     }
 
-    .contact-info h2 {
-        font-size: 26px;
+    .contact-form-wrap h3 {
+        font-size: 22px;
     }
 
-    .info-block-main,
-    .info-block {
-        margin-bottom: 18px;
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 14px;
+    }
+
+    .btn-submit {
+        padding: 15px;
+    }
+
+}
+
+/*-----------------------------------------
+Small Mobile (480px)
+-----------------------------------------*/
+@media (max-width: 480px) {
+
+    .page-banner {
+        height: 320px;
+    }
+
+    .banner-content {
+        padding: 0 16px 32px;
+    }
+
+    .banner-content h1 {
+        font-size: 28px;
+    }
+
+    .banner-content p {
+        font-size: 15px;
+    }
+
+    .contact-grid {
+        width: 94%;
+        gap: 30px;
+    }
+
+    .cta-bar {
+        padding: 20px 16px;
+    }
+
+    .contact-info {
+        gap: 16px;
+    }
+
+    .contact-info h2 {
+        font-size: 22px;
+    }
+
+    .info-value {
+        font-size: 15px;
     }
 
     .map-embed {
@@ -76,103 +261,26 @@
     }
 
     .contact-form-wrap {
-        width: 100%;
-        padding: 20px;
-        margin: 0;
+        padding: 18px;
     }
 
-    .contact-request-form {
-        gap: 12px;
+    .contact-form-wrap h3 {
+        font-size: 20px;
     }
 
-    .form-row {
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .form-group {
-        width: 100%;
+    .form-group label {
+        font-size: 13px;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
-        width: 100%;
+        font-size: 14px;
     }
 
     .btn-submit {
-        width: 100%;
-        padding: 14px 16px;
-    }
-}
-
-@media (max-width: 600px) {
-    .banner-content {
-        padding: 28px 16px 36px;
+        font-size: 15px;
+        padding: 14px;
     }
 
-    .banner-content h1 {
-        font-size: 30px;
-    }
-
-    .banner-content p {
-        font-size: 16px;
-    }
-
-    .cta-bar {
-        padding: 20px 16px;
-        height: 180px;
-    }
-
-    .btn-call {
-        padding: 14px 18px;
-    }
-
-    .contact-info {
-        padding: 16px;
-    }
-
-    .contact-form-wrap {
-        padding: 18px;
-    }
-}
-
-/* HD devices */
-@media (min-width: 1280px) and (max-width: 1599px) {
-    .contact-grid {
-        grid-template-columns: 450px 1fr;
-        gap: 30px;
-        margin: 3%;
-    }
-
-    .cta-bar {
-        padding: 36px 32px;
-    }
-}
-
-/* Full HD devices */
-@media (min-width: 1600px) and (max-width: 1919px) {
-    .container {
-        max-width: 1400px;
-        padding: 0 40px;
-    }
-
-    .cta-bar {
-        padding: 42px 40px;
-    }
-}
-
-/* Mac devices and large retina screens */
-@media screen and (min-width: 1920px) {
-    .banner-content h1 {
-        font-size: 72px;
-    }
-
-    .banner-content p {
-        font-size: 24px;
-    }
-
-    .map-embed {
-        height: 260px;
-    }
 }

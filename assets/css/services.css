@@ -73,7 +73,7 @@ Services List Section
 =========================================*/
 
 .services-list-section {
-    padding: 20px 0 100px;
+    padding: 25px 0 40px;
     background: #fff;
 }
 
@@ -126,16 +126,6 @@ Filter Tabs
 /*=========================================
 Service Row
 =========================================*/
-
-.service-row {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    padding: 50px 0;
-    border-bottom: 1px solid #eee;
-    scroll-margin-top: 110px;
-    transition: opacity .3s ease;
-}
 
 .service-row.reverse {
     flex-direction: row-reverse;
@@ -250,14 +240,20 @@ Responsive
 Filter - Hidden State
 =========================================*/
 
+
 .service-row {
     display: flex;
     align-items: center;
     gap: 60px;
-    padding: 20px 0;
+    padding: 30px 30px;
     border-bottom: 1px solid #eee;
     scroll-margin-top: 110px;
     transition: opacity .3s ease;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.08);
+    margin: 20px 10px;
+
 }
 
 .service-row.hidden {

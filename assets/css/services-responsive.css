@@ -41,7 +41,7 @@
     }
 
     .service-row {
-        padding: 24px 0;
+        padding: 15px;
     }
 
     .service-text h3 {
@@ -72,6 +72,9 @@
 
     .service-row {
         gap: 36px;
+        border-radius: 20px;
+        padding: 30px;
+        margin: 30px 10px;
     }
 
     .service-image img {

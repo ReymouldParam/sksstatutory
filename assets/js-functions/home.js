@@ -1,3 +1,28 @@
+// Header active navigation 
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname
+        .split("/")
+        .pop()
+        .replace(".html", "");
+
+    const navLinks = document.querySelectorAll(".navigation a");
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute("href")
+            .replace("./", "")
+            .replace(".html", "");
+
+        // Home page
+        if (
+            (currentPath === "" && (href === "." || href === "")) ||
+            (href === currentPath)
+        ) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+});
 // Mobile Header Toggle
 
 const toggleBtn = document.getElementById('mobileToggle');
