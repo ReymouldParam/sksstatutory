@@ -73,7 +73,9 @@ Header
     height: 78px;
     background: #ffffff;
     z-index: 9999;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow:
+        -6px 8px 20px rgba(32, 53, 142, 0.30),
+        6px 8px 20px rgba(143, 69, 72, 0.30);
 }
 
 body {
@@ -185,7 +187,7 @@ Header Buttons
 }
 
 .btn-call:hover {
-    color:#fff;
+    color: #fff;
     background: #19357d;
 
 }

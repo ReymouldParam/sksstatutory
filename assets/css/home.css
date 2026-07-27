@@ -454,6 +454,11 @@ Cards — Zigzag placement
 
 .service-card img {
     width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.service-card img:hover {
+    transform: scale(1.1);
 }
 
 .service-card h4 {
