@@ -107,24 +107,6 @@ Top CTA Bar
     font-weight: 300;
 }
 
-.btn-call {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border: 1px solid rgba(255, 255, 255, .5);
-    border-radius: 6px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    white-space: nowrap;
-    transition: .3s;
-}
-
-.btn-call:hover {
-    background: rgba(255, 255, 255, .15);
-}
 
 .container {
     max-width: 1700px;
