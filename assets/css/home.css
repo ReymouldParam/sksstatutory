@@ -1289,7 +1289,7 @@ Trusted Businesses
 
 /*====================*/
 
-.client-card {
+/* .client-card {
     height: 180px;
     border-radius: 24px;
     background: #000;
@@ -1300,7 +1300,7 @@ Trusted Businesses
         0 2px 12px rgba(0, 0, 0, .04),
         0 10px 30px rgba(0, 0, 0, .05);
     transition: .35s;
-}
+} */
 
 .client-card img {
 
@@ -1360,7 +1360,7 @@ Trusted Businesses
 }
 
 /* Client Card */
-.client-card {
+/* .client-card {
     flex: 0 0 290px;
     height: 180px;
     border-radius: 24px;
@@ -1372,7 +1372,7 @@ Trusted Businesses
     box-shadow:
         0 2px 12px rgba(0, 0, 0, .05),
         0 10px 30px rgba(0, 0, 0, .08);
-}
+} */
 
 .client-card:hover {
     transform: translateY(-8px);
