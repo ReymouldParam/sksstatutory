@@ -3,7 +3,7 @@ Hero Section
 ====================================*/
 
 .hero-section {
-    padding: 55px 0 20px;
+    padding: 35px 0 20px;
 
 }
 
@@ -1010,7 +1010,7 @@ Content
 
 .info-content h3 {
     margin: 0;
-    font-size: 42px;
+    font-size: 35px;
     line-height: 1.12;
     font-weight: 300;
     color: #222;
