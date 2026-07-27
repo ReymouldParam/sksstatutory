@@ -1374,9 +1374,9 @@ Trusted Businesses
         0 10px 30px rgba(0, 0, 0, .08);
 } */
 
-.client-card:hover {
+/* .client-card:hover {
     transform: translateY(-8px);
-}
+} */
 
 .client-card img {
     max-width: 80%;
