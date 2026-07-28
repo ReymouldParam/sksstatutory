@@ -246,6 +246,7 @@ Small Mobile (480px)
 
     .contact-info {
         gap: 16px;
+        width: 60%;
     }
 
     .contact-info h2 {
@@ -262,6 +263,7 @@ Small Mobile (480px)
 
     .contact-form-wrap {
         padding: 18px;
+        width: 60%;
     }
 
     .contact-form-wrap h3 {
@@ -272,6 +274,7 @@ Small Mobile (480px)
         font-size: 13px;
     }
 
+    
     .form-group input,
     .form-group select,
     .form-group textarea {
