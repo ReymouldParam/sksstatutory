@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $number = $_POST['number'];
     $service = $_POST['service'];
     $organization = $_POST['organization'];
-    $employees = $_POST['Employee's];
+    $employees = $_POST['employees'];
     $dropMessage = $_POST['dropMessage'];
     $auditRequest = isset($_POST['auditRequest']) ? "Yes" : "No";
 
